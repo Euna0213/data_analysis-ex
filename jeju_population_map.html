@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_93ca48ac687a322b7dfaf9cc1cc04e12 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position:fixed; top:12px; left:50%; transform:translateX(-50%);
+     background:white; padding:10px 18px; border-radius:8px;
+     box-shadow:0 2px 8px rgba(0,0,0,0.2); z-index:1000;
+     font-family:'Malgun Gothic',sans-serif; text-align:center;">
+  <b style="font-size:15px;">제주도 읍면동별 2025년 인구 현황</b><br>
+  <span style="font-size:11px; color:#888;">원 크기 = 인구수 비례 · 클릭하면 상세 팝업</span>
+</div>
+    
+            <div class="folium-map" id="map_93ca48ac687a322b7dfaf9cc1cc04e12" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_93ca48ac687a322b7dfaf9cc1cc04e12 = L.map(
+                "map_93ca48ac687a322b7dfaf9cc1cc04e12",
+                {
+                    center: [33.38, 126.56],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f5106e3827855d6e646c328d71de812e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f5106e3827855d6e646c328d71de812e.addTo(map_93ca48ac687a322b7dfaf9cc1cc04e12);
+        
+    
+            var feature_group_90a95084c10da88820ab541ee44198bf = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_2028ba414745b0d160a665b80cb421d0 = L.circleMarker(
+                [33.2375, 126.2538],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.73280583621811, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_aaa29be54ca5983d30a4768ee24b22b5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c95948b65f9bc61df9c6892106384fbb = $(`<div id="html_c95948b65f9bc61df9c6892106384fbb" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 대정읍</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">21,478명</span>     </div></div>`)[0];
+                popup_aaa29be54ca5983d30a4768ee24b22b5.setContent(html_c95948b65f9bc61df9c6892106384fbb);
+            
+        
+
+        circle_marker_2028ba414745b0d160a665b80cb421d0.bindPopup(popup_aaa29be54ca5983d30a4768ee24b22b5)
+        ;
+
+        
+    
+    
+            circle_marker_2028ba414745b0d160a665b80cb421d0.bindTooltip(
+                `<div>
+                     서귀포시 대정읍  21,478명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_9ee9f41d8bd346cb99681daf89ebcc6f = L.circleMarker(
+                [33.2815, 126.6839],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.762501924705564, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_a9f374732b434f28ad73aea5657ba067 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4b655b6fd907eb95d4cd9526cf6c0222 = $(`<div id="html_4b655b6fd907eb95d4cd9526cf6c0222" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 남원읍</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">17,774명</span>     </div></div>`)[0];
+                popup_a9f374732b434f28ad73aea5657ba067.setContent(html_4b655b6fd907eb95d4cd9526cf6c0222);
+            
+        
+
+        circle_marker_9ee9f41d8bd346cb99681daf89ebcc6f.bindPopup(popup_a9f374732b434f28ad73aea5657ba067)
+        ;
+
+        
+    
+    
+            circle_marker_9ee9f41d8bd346cb99681daf89ebcc6f.bindTooltip(
+                `<div>
+                     서귀포시 남원읍  17,774명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_5f1aa2c37e96ffd1d1c2c5481f534b69 = L.circleMarker(
+                [33.4387, 126.9205],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.780303570253945, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_cc67699a365006340e16654835de59c7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_16b6381156d94b9348020d0df8e5de89 = $(`<div id="html_16b6381156d94b9348020d0df8e5de89" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 성산읍</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">14,552명</span>     </div></div>`)[0];
+                popup_cc67699a365006340e16654835de59c7.setContent(html_16b6381156d94b9348020d0df8e5de89);
+            
+        
+
+        circle_marker_5f1aa2c37e96ffd1d1c2c5481f534b69.bindPopup(popup_cc67699a365006340e16654835de59c7)
+        ;
+
+        
+    
+    
+            circle_marker_5f1aa2c37e96ffd1d1c2c5481f534b69.bindTooltip(
+                `<div>
+                     서귀포시 성산읍  14,552명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_c407414e13e98d444fb321325dbf2ff3 = L.circleMarker(
+                [33.2584, 126.3635],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.966639228607931, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_6139487d9b556efcdf94eda44a857ef0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6c60c88cd68acb4fb98a1e7b39a0a982 = $(`<div id="html_6c60c88cd68acb4fb98a1e7b39a0a982" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 안덕면</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">12,231명</span>     </div></div>`)[0];
+                popup_6139487d9b556efcdf94eda44a857ef0.setContent(html_6c60c88cd68acb4fb98a1e7b39a0a982);
+            
+        
+
+        circle_marker_c407414e13e98d444fb321325dbf2ff3.bindPopup(popup_6139487d9b556efcdf94eda44a857ef0)
+        ;
+
+        
+    
+    
+            circle_marker_c407414e13e98d444fb321325dbf2ff3.bindTooltip(
+                `<div>
+                     서귀포시 안덕면  12,231명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_b2b00fe4e5a32e1beb2388c197579ffb = L.circleMarker(
+                [33.3243, 126.8385],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.138824701645174, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_f0d39483a9a36acbce85f2f244de9151 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9398401dc7c939af04f8c2a20a7db930 = $(`<div id="html_9398401dc7c939af04f8c2a20a7db930" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 표선면</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">12,698명</span>     </div></div>`)[0];
+                popup_f0d39483a9a36acbce85f2f244de9151.setContent(html_9398401dc7c939af04f8c2a20a7db930);
+            
+        
+
+        circle_marker_b2b00fe4e5a32e1beb2388c197579ffb.bindPopup(popup_f0d39483a9a36acbce85f2f244de9151)
+        ;
+
+        
+    
+    
+            circle_marker_b2b00fe4e5a32e1beb2388c197579ffb.bindTooltip(
+                `<div>
+                     서귀포시 표선면  12,698명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_5d8859d0f67845ddec16ff22cec15a6f = L.circleMarker(
+                [33.2507, 126.562],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.56713632970994, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_3d7e8bb5cb05a2b795b7741ccefbba02 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_84859c792ef955d71a238610f0848b89 = $(`<div id="html_84859c792ef955d71a238610f0848b89" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 송산동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">3,701명</span>     </div></div>`)[0];
+                popup_3d7e8bb5cb05a2b795b7741ccefbba02.setContent(html_84859c792ef955d71a238610f0848b89);
+            
+        
+
+        circle_marker_5d8859d0f67845ddec16ff22cec15a6f.bindPopup(popup_3d7e8bb5cb05a2b795b7741ccefbba02)
+        ;
+
+        
+    
+    
+            circle_marker_5d8859d0f67845ddec16ff22cec15a6f.bindTooltip(
+                `<div>
+                     서귀포시 송산동  3,701명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_1e328d520f392061c3b8e2d13e99cff5 = L.circleMarker(
+                [33.247, 126.5669],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.172937881481143, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_82e69e3331ceeb453a332a24793b5923 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bae8cb2a4b23d3cdb9d9151220fee185 = $(`<div id="html_bae8cb2a4b23d3cdb9d9151220fee185" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 정방동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">2,007명</span>     </div></div>`)[0];
+                popup_82e69e3331ceeb453a332a24793b5923.setContent(html_bae8cb2a4b23d3cdb9d9151220fee185);
+            
+        
+
+        circle_marker_1e328d520f392061c3b8e2d13e99cff5.bindPopup(popup_82e69e3331ceeb453a332a24793b5923)
+        ;
+
+        
+    
+    
+            circle_marker_1e328d520f392061c3b8e2d13e99cff5.bindTooltip(
+                `<div>
+                     서귀포시 정방동  2,007명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_5ae8776bc938831349f52ed61f0386e6 = L.circleMarker(
+                [33.2491, 126.5581],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.973764453219516, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_cb875c3ad66d4dc3b4865fa247f4a3e9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2289d4c12fc1fe2610ef6e45fe058fe7 = $(`<div id="html_2289d4c12fc1fe2610ef6e45fe058fe7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 중앙동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">2,935명</span>     </div></div>`)[0];
+                popup_cb875c3ad66d4dc3b4865fa247f4a3e9.setContent(html_2289d4c12fc1fe2610ef6e45fe058fe7);
+            
+        
+
+        circle_marker_5ae8776bc938831349f52ed61f0386e6.bindPopup(popup_cb875c3ad66d4dc3b4865fa247f4a3e9)
+        ;
+
+        
+    
+    
+            circle_marker_5ae8776bc938831349f52ed61f0386e6.bindTooltip(
+                `<div>
+                     서귀포시 중앙동  2,935명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_956451947aa327e848302bb013b7622e = L.circleMarker(
+                [33.2525, 126.5563],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.25479540871068, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_fbc23dccfa8981a9ea5f04a8015d2104 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_beb7a5e58ffa600bc2ac6d84b263b229 = $(`<div id="html_beb7a5e58ffa600bc2ac6d84b263b229" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 천지동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">3,289명</span>     </div></div>`)[0];
+                popup_fbc23dccfa8981a9ea5f04a8015d2104.setContent(html_beb7a5e58ffa600bc2ac6d84b263b229);
+            
+        
+
+        circle_marker_956451947aa327e848302bb013b7622e.bindPopup(popup_fbc23dccfa8981a9ea5f04a8015d2104)
+        ;
+
+        
+    
+    
+            circle_marker_956451947aa327e848302bb013b7622e.bindTooltip(
+                `<div>
+                     서귀포시 천지동  3,289명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_9c4511b31971c07118380d33258709fc = L.circleMarker(
+                [33.2956, 126.6105],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.591224977096761, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_c0d6b5f3f0aa0d57b04c31e4b6e1d79f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_82e6649da0819df856ec0a58e3d2cb4f = $(`<div id="html_82e6649da0819df856ec0a58e3d2cb4f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 효돈동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">5,201명</span>     </div></div>`)[0];
+                popup_c0d6b5f3f0aa0d57b04c31e4b6e1d79f.setContent(html_82e6649da0819df856ec0a58e3d2cb4f);
+            
+        
+
+        circle_marker_9c4511b31971c07118380d33258709fc.bindPopup(popup_c0d6b5f3f0aa0d57b04c31e4b6e1d79f)
+        ;
+
+        
+    
+    
+            circle_marker_9c4511b31971c07118380d33258709fc.bindTooltip(
+                `<div>
+                     서귀포시 효돈동  5,201명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_f3fc62c7e11a45aaa629d526a96269c0 = L.circleMarker(
+                [33.2718, 126.5805],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.490073767481974, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_1675d40d42eb8e738368f95397896fbb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_60f0c2ea2300a0ae560748bb0ecc032b = $(`<div id="html_60f0c2ea2300a0ae560748bb0ecc032b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 영천동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">5,042명</span>     </div></div>`)[0];
+                popup_1675d40d42eb8e738368f95397896fbb.setContent(html_60f0c2ea2300a0ae560748bb0ecc032b);
+            
+        
+
+        circle_marker_f3fc62c7e11a45aaa629d526a96269c0.bindPopup(popup_1675d40d42eb8e738368f95397896fbb)
+        ;
+
+        
+    
+    
+            circle_marker_f3fc62c7e11a45aaa629d526a96269c0.bindTooltip(
+                `<div>
+                     서귀포시 영천동  5,042명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_03b23b8881559d0b3ebb9099c6d5173d = L.circleMarker(
+                [33.2617, 126.5674],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.98765283249049, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_4b9dc4045f081c817b1bdc881bb54107 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a92dd166b3c30b3793a02ee8b921da80 = $(`<div id="html_a92dd166b3c30b3793a02ee8b921da80" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 동홍동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">22,547명</span>     </div></div>`)[0];
+                popup_4b9dc4045f081c817b1bdc881bb54107.setContent(html_a92dd166b3c30b3793a02ee8b921da80);
+            
+        
+
+        circle_marker_03b23b8881559d0b3ebb9099c6d5173d.bindPopup(popup_4b9dc4045f081c817b1bdc881bb54107)
+        ;
+
+        
+    
+    
+            circle_marker_03b23b8881559d0b3ebb9099c6d5173d.bindTooltip(
+                `<div>
+                     서귀포시 동홍동  22,547명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_a509e3a0f87d190de9ac7d397f2b1ee5 = L.circleMarker(
+                [33.2746, 126.5335],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.487368661138806, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_f9912e270259c2d0fa80f4d52278e358 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7ff66fd04a3d0b685eb2c91cab09f514 = $(`<div id="html_7ff66fd04a3d0b685eb2c91cab09f514" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 서홍동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">10,995명</span>     </div></div>`)[0];
+                popup_f9912e270259c2d0fa80f4d52278e358.setContent(html_7ff66fd04a3d0b685eb2c91cab09f514);
+            
+        
+
+        circle_marker_a509e3a0f87d190de9ac7d397f2b1ee5.bindPopup(popup_f9912e270259c2d0fa80f4d52278e358)
+        ;
+
+        
+    
+    
+            circle_marker_a509e3a0f87d190de9ac7d397f2b1ee5.bindTooltip(
+                `<div>
+                     서귀포시 서홍동  10,995명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_325c064c536d1a0096f1df8566b40464 = L.circleMarker(
+                [33.2916, 126.4942],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.862436930952365, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_1ea281cf7ec729c6c36405f1721f0818 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ca3efbf4697a350b1e11e66d3eb2ce18 = $(`<div id="html_ca3efbf4697a350b1e11e66d3eb2ce18" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 대륜동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">14,803명</span>     </div></div>`)[0];
+                popup_1ea281cf7ec729c6c36405f1721f0818.setContent(html_ca3efbf4697a350b1e11e66d3eb2ce18);
+            
+        
+
+        circle_marker_325c064c536d1a0096f1df8566b40464.bindPopup(popup_1ea281cf7ec729c6c36405f1721f0818)
+        ;
+
+        
+    
+    
+            circle_marker_325c064c536d1a0096f1df8566b40464.bindTooltip(
+                `<div>
+                     서귀포시 대륜동  14,803명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_5971fa92a51c2d684be403d6cc3f8d2d = L.circleMarker(
+                [33.2946, 126.5072],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.479982922365917, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_205264849d21a509bb898031c75825a5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e3fc3d3f76e3ce2c0f7584a720f3e9b8 = $(`<div id="html_e3fc3d3f76e3ce2c0f7584a720f3e9b8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 대천동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">13,661명</span>     </div></div>`)[0];
+                popup_205264849d21a509bb898031c75825a5.setContent(html_e3fc3d3f76e3ce2c0f7584a720f3e9b8);
+            
+        
+
+        circle_marker_5971fa92a51c2d684be403d6cc3f8d2d.bindPopup(popup_205264849d21a509bb898031c75825a5)
+        ;
+
+        
+    
+    
+            circle_marker_5971fa92a51c2d684be403d6cc3f8d2d.bindTooltip(
+                `<div>
+                     서귀포시 대천동  13,661명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_a5e444fa4447217ade18b398ec827481 = L.circleMarker(
+                [33.2494, 126.4802],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.879735404798547, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_c0df59cdd8cddc5999366eee64dc17f2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c7134befc6aed393a9b4eedb9d84b075 = $(`<div id="html_c7134befc6aed393a9b4eedb9d84b075" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 중문동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">12,000명</span>     </div></div>`)[0];
+                popup_c0df59cdd8cddc5999366eee64dc17f2.setContent(html_c7134befc6aed393a9b4eedb9d84b075);
+            
+        
+
+        circle_marker_a5e444fa4447217ade18b398ec827481.bindPopup(popup_c0df59cdd8cddc5999366eee64dc17f2)
+        ;
+
+        
+    
+    
+            circle_marker_a5e444fa4447217ade18b398ec827481.bindTooltip(
+                `<div>
+                     서귀포시 중문동  12,000명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_7ca9c931adea3a0308021d9a537ada5b = L.circleMarker(
+                [33.2441, 126.4488],
+                {"bubblingMouseEvents": true, "color": "#eb6834", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.576010396124499, "stroke": true, "weight": 2}
+            ).addTo(feature_group_90a95084c10da88820ab541ee44198bf);
+        
+    
+        var popup_6a8b8f7743cd21d5f8378d9e0a823913 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_bb0aa72c3cf729b95de61c13dcf8960b = $(`<div id="html_bb0aa72c3cf729b95de61c13dcf8960b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#eb6834; font-size:14px;">서귀포시 예래동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#eb6834;">3,713명</span>     </div></div>`)[0];
+                popup_6a8b8f7743cd21d5f8378d9e0a823913.setContent(html_bb0aa72c3cf729b95de61c13dcf8960b);
+            
+        
+
+        circle_marker_7ca9c931adea3a0308021d9a537ada5b.bindPopup(popup_6a8b8f7743cd21d5f8378d9e0a823913)
+        ;
+
+        
+    
+    
+            circle_marker_7ca9c931adea3a0308021d9a537ada5b.bindTooltip(
+                `<div>
+                     서귀포시 예래동  3,713명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            feature_group_90a95084c10da88820ab541ee44198bf.addTo(map_93ca48ac687a322b7dfaf9cc1cc04e12);
+        
+    
+            var feature_group_87bffedf3efa7533d69b37cf771fdaed = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_3da45be61113358877aa8037b1e72b3a = L.circleMarker(
+                [33.414, 126.2682],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.321288871544997, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_75e7cf8bfffa23eabb65c6975581083c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0ffa80c8fa5dea1d9dbdcd509c84c0a0 = $(`<div id="html_0ffa80c8fa5dea1d9dbdcd509c84c0a0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 한림읍</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">24,012명</span>     </div></div>`)[0];
+                popup_75e7cf8bfffa23eabb65c6975581083c.setContent(html_0ffa80c8fa5dea1d9dbdcd509c84c0a0);
+            
+        
+
+        circle_marker_3da45be61113358877aa8037b1e72b3a.bindPopup(popup_75e7cf8bfffa23eabb65c6975581083c)
+        ;
+
+        
+    
+    
+            circle_marker_3da45be61113358877aa8037b1e72b3a.bindTooltip(
+                `<div>
+                     제주시 한림읍  24,012명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_e6d7fb022cf572435f0fabdecceea1b2 = L.circleMarker(
+                [33.4631, 126.3143],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.369269879999717, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_656d8a3bbf7622d3a5e79f8d1f4a81e1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2fdc5c04f05ef20091f15c325c195813 = $(`<div id="html_2fdc5c04f05ef20091f15c325c195813" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 애월읍</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">34,876명</span>     </div></div>`)[0];
+                popup_656d8a3bbf7622d3a5e79f8d1f4a81e1.setContent(html_2fdc5c04f05ef20091f15c325c195813);
+            
+        
+
+        circle_marker_e6d7fb022cf572435f0fabdecceea1b2.bindPopup(popup_656d8a3bbf7622d3a5e79f8d1f4a81e1)
+        ;
+
+        
+    
+    
+            circle_marker_e6d7fb022cf572435f0fabdecceea1b2.bindTooltip(
+                `<div>
+                     제주시 애월읍  34,876명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_4351590319d31426218d5475f5b523a5 = L.circleMarker(
+                [33.5282, 126.7882],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.690571160591643, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_a0ee8ca3c25fe0f8a456475b71c5e528 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_471b81951a94635f3c730bef9af52d03 = $(`<div id="html_471b81951a94635f3c730bef9af52d03" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 구좌읍</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">17,521명</span>     </div></div>`)[0];
+                popup_a0ee8ca3c25fe0f8a456475b71c5e528.setContent(html_471b81951a94635f3c730bef9af52d03);
+            
+        
+
+        circle_marker_4351590319d31426218d5475f5b523a5.bindPopup(popup_a0ee8ca3c25fe0f8a456475b71c5e528)
+        ;
+
+        
+    
+    
+            circle_marker_4351590319d31426218d5475f5b523a5.bindTooltip(
+                `<div>
+                     제주시 구좌읍  17,521명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_df115304a4996533dc569f9dbae9ccdf = L.circleMarker(
+                [33.5386, 126.6437],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.930601674329367, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_2ee0e430e25ed11da60191e04ff4973c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_059035e65cd9b829a9c2a89e1c6d1f48 = $(`<div id="html_059035e65cd9b829a9c2a89e1c6d1f48" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 조천읍</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">22,304명</span>     </div></div>`)[0];
+                popup_2ee0e430e25ed11da60191e04ff4973c.setContent(html_059035e65cd9b829a9c2a89e1c6d1f48);
+            
+        
+
+        circle_marker_df115304a4996533dc569f9dbae9ccdf.bindPopup(popup_2ee0e430e25ed11da60191e04ff4973c)
+        ;
+
+        
+    
+    
+            circle_marker_df115304a4996533dc569f9dbae9ccdf.bindTooltip(
+                `<div>
+                     제주시 조천읍  22,304명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_96dfeda887ee32264381a9ee1836afcb = L.circleMarker(
+                [33.3498, 126.1916],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.693104494195378, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_bc1368db6e2644c32e338c803dfe7ed3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_470c431bd9d8c5f55c107fe6b2e76aa0 = $(`<div id="html_470c431bd9d8c5f55c107fe6b2e76aa0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 한경면</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">14,289명</span>     </div></div>`)[0];
+                popup_bc1368db6e2644c32e338c803dfe7ed3.setContent(html_470c431bd9d8c5f55c107fe6b2e76aa0);
+            
+        
+
+        circle_marker_96dfeda887ee32264381a9ee1836afcb.bindPopup(popup_bc1368db6e2644c32e338c803dfe7ed3)
+        ;
+
+        
+    
+    
+            circle_marker_96dfeda887ee32264381a9ee1836afcb.bindTooltip(
+                `<div>
+                     제주시 한경면  14,289명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_6547bd330eaf1fc4af4f4af9c368cae5 = L.circleMarker(
+                [33.9612, 126.3002],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.882540332613982, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_a6940ce164ddb5f11df86dbf12e63ed7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ee745937f13acd121beff155f882cbc7 = $(`<div id="html_ee745937f13acd121beff155f882cbc7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 추자면</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">1,698명</span>     </div></div>`)[0];
+                popup_a6940ce164ddb5f11df86dbf12e63ed7.setContent(html_ee745937f13acd121beff155f882cbc7);
+            
+        
+
+        circle_marker_6547bd330eaf1fc4af4f4af9c368cae5.bindPopup(popup_a6940ce164ddb5f11df86dbf12e63ed7)
+        ;
+
+        
+    
+    
+            circle_marker_6547bd330eaf1fc4af4f4af9c368cae5.bindTooltip(
+                `<div>
+                     제주시 추자면  1,698명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_25ffbce1683c29b4c907541af43ebf34 = L.circleMarker(
+                [33.5041, 126.9519],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.994042892457576, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_61b5468c0a0dbded1b369531ff629675 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7a43a49759701a75a42f57820ba96a24 = $(`<div id="html_7a43a49759701a75a42f57820ba96a24" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 우도면</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">1,815명</span>     </div></div>`)[0];
+                popup_61b5468c0a0dbded1b369531ff629675.setContent(html_7a43a49759701a75a42f57820ba96a24);
+            
+        
+
+        circle_marker_25ffbce1683c29b4c907541af43ebf34.bindPopup(popup_61b5468c0a0dbded1b369531ff629675)
+        ;
+
+        
+    
+    
+            circle_marker_25ffbce1683c29b4c907541af43ebf34.bindTooltip(
+                `<div>
+                     제주시 우도면  1,815명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_a252e1c345594efd9e128ba8de2b0998 = L.circleMarker(
+                [33.5127, 126.5228],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.627904396913092, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_83fd43598e3149cc39f4f9288e706fb6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a29895c3c2c91f9a4c3a08a9229878fd = $(`<div id="html_a29895c3c2c91f9a4c3a08a9229878fd" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 일도1동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">6,983명</span>     </div></div>`)[0];
+                popup_83fd43598e3149cc39f4f9288e706fb6.setContent(html_a29895c3c2c91f9a4c3a08a9229878fd);
+            
+        
+
+        circle_marker_a252e1c345594efd9e128ba8de2b0998.bindPopup(popup_83fd43598e3149cc39f4f9288e706fb6)
+        ;
+
+        
+    
+    
+            circle_marker_a252e1c345594efd9e128ba8de2b0998.bindTooltip(
+                `<div>
+                     제주시 일도1동  6,983명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_be006648ac6a1b51196ea5ef9844c1d7 = L.circleMarker(
+                [33.5189, 126.5315],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.74956331039094, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_bdb3885143f83d2c71652e2a9b09d224 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_edd3b4cfd0a4814adad2b22ec48051dc = $(`<div id="html_edd3b4cfd0a4814adad2b22ec48051dc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 일도2동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">21,547명</span>     </div></div>`)[0];
+                popup_bdb3885143f83d2c71652e2a9b09d224.setContent(html_edd3b4cfd0a4814adad2b22ec48051dc);
+            
+        
+
+        circle_marker_be006648ac6a1b51196ea5ef9844c1d7.bindPopup(popup_bdb3885143f83d2c71652e2a9b09d224)
+        ;
+
+        
+    
+    
+            circle_marker_be006648ac6a1b51196ea5ef9844c1d7.bindTooltip(
+                `<div>
+                     제주시 일도2동  21,547명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_a419edc76ab1d2ff8c5fec7822f46fa1 = L.circleMarker(
+                [33.5043, 126.5278],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.162792111994467, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_8bb608ae1295b97addc1babf17db2d51 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_db3032c7f5ff2459a302e7becbf54359 = $(`<div id="html_db3032c7f5ff2459a302e7becbf54359" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 이도1동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">12,764명</span>     </div></div>`)[0];
+                popup_8bb608ae1295b97addc1babf17db2d51.setContent(html_db3032c7f5ff2459a302e7becbf54359);
+            
+        
+
+        circle_marker_a419edc76ab1d2ff8c5fec7822f46fa1.bindPopup(popup_8bb608ae1295b97addc1babf17db2d51)
+        ;
+
+        
+    
+    
+            circle_marker_a419edc76ab1d2ff8c5fec7822f46fa1.bindTooltip(
+                `<div>
+                     제주시 이도1동  12,764명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_50332b772800f62dfdd7a01b6d44e33d = L.circleMarker(
+                [33.4956, 126.5412],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.262134658097988, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_c1a5a06bd429388c678d76088085506f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d423475ddea2ef425c389870acb8b1fb = $(`<div id="html_d423475ddea2ef425c389870acb8b1fb" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 이도2동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">34,218명</span>     </div></div>`)[0];
+                popup_c1a5a06bd429388c678d76088085506f.setContent(html_d423475ddea2ef425c389870acb8b1fb);
+            
+        
+
+        circle_marker_50332b772800f62dfdd7a01b6d44e33d.bindPopup(popup_c1a5a06bd429388c678d76088085506f)
+        ;
+
+        
+    
+    
+            circle_marker_50332b772800f62dfdd7a01b6d44e33d.bindTooltip(
+                `<div>
+                     제주시 이도2동  34,218명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_1545bc77f9954dc99f51bf20d8cd3c66 = L.circleMarker(
+                [33.5088, 126.5157],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.216324057016312, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_23cf95fcb91636d71c465a9dedade0a4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3ea42eec922b8c57f0a08f3a07e745bf = $(`<div id="html_3ea42eec922b8c57f0a08f3a07e745bf" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 삼도1동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">6,241명</span>     </div></div>`)[0];
+                popup_23cf95fcb91636d71c465a9dedade0a4.setContent(html_3ea42eec922b8c57f0a08f3a07e745bf);
+            
+        
+
+        circle_marker_1545bc77f9954dc99f51bf20d8cd3c66.bindPopup(popup_23cf95fcb91636d71c465a9dedade0a4)
+        ;
+
+        
+    
+    
+            circle_marker_1545bc77f9954dc99f51bf20d8cd3c66.bindTooltip(
+                `<div>
+                     제주시 삼도1동  6,241명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_0dbdcf279c4d012847a0cbc6d8bb180a = L.circleMarker(
+                [33.5013, 126.5193],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.871859278360196, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_511f68ab5afcb06135efe37693f6a2ff = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f15b5431a73169f80c1559c7371ef911 = $(`<div id="html_f15b5431a73169f80c1559c7371ef911" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 삼도2동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">14,832명</span>     </div></div>`)[0];
+                popup_511f68ab5afcb06135efe37693f6a2ff.setContent(html_f15b5431a73169f80c1559c7371ef911);
+            
+        
+
+        circle_marker_0dbdcf279c4d012847a0cbc6d8bb180a.bindPopup(popup_511f68ab5afcb06135efe37693f6a2ff)
+        ;
+
+        
+    
+    
+            circle_marker_0dbdcf279c4d012847a0cbc6d8bb180a.bindTooltip(
+                `<div>
+                     제주시 삼도2동  14,832명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_6377c218d5e6827f15e382f22595688b = L.circleMarker(
+                [33.5155, 126.5027],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.208903047678312, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_4b2c2a0cbf4441148a309291f9b58d30 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e71d26ac6236ccf9d866f611e802a182 = $(`<div id="html_e71d26ac6236ccf9d866f611e802a182" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 용담1동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">10,318명</span>     </div></div>`)[0];
+                popup_4b2c2a0cbf4441148a309291f9b58d30.setContent(html_e71d26ac6236ccf9d866f611e802a182);
+            
+        
+
+        circle_marker_6377c218d5e6827f15e382f22595688b.bindPopup(popup_4b2c2a0cbf4441148a309291f9b58d30)
+        ;
+
+        
+    
+    
+            circle_marker_6377c218d5e6827f15e382f22595688b.bindTooltip(
+                `<div>
+                     제주시 용담1동  10,318명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_dc81249faa9f7fe20d5bc005d36213cf = L.circleMarker(
+                [33.5096, 126.4872],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.159166415817744, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_ed0b02f615bab09c1575bc83eee7f8d6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_538fb108edf1cdc5d6844bce3c934c9b = $(`<div id="html_538fb108edf1cdc5d6844bce3c934c9b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 용담2동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">12,754명</span>     </div></div>`)[0];
+                popup_ed0b02f615bab09c1575bc83eee7f8d6.setContent(html_538fb108edf1cdc5d6844bce3c934c9b);
+            
+        
+
+        circle_marker_dc81249faa9f7fe20d5bc005d36213cf.bindPopup(popup_ed0b02f615bab09c1575bc83eee7f8d6)
+        ;
+
+        
+    
+    
+            circle_marker_dc81249faa9f7fe20d5bc005d36213cf.bindTooltip(
+                `<div>
+                     제주시 용담2동  12,754명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_0c5ba022d5da26b7d5388de3b4ed111e = L.circleMarker(
+                [33.5218, 126.543],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.273608382680447, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_219781847a91053fefa7f35009cdabe6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_817f8363b78d10d01345dd7a190f67a5 = $(`<div id="html_817f8363b78d10d01345dd7a190f67a5" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 건입동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">8,247명</span>     </div></div>`)[0];
+                popup_219781847a91053fefa7f35009cdabe6.setContent(html_817f8363b78d10d01345dd7a190f67a5);
+            
+        
+
+        circle_marker_0c5ba022d5da26b7d5388de3b4ed111e.bindPopup(popup_219781847a91053fefa7f35009cdabe6)
+        ;
+
+        
+    
+    
+            circle_marker_0c5ba022d5da26b7d5388de3b4ed111e.bindTooltip(
+                `<div>
+                     제주시 건입동  8,247명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_36380adc640dae1118bdd1f53c74b4e3 = L.circleMarker(
+                [33.5137, 126.5688],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.23068646729525, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_7f1e35cdd5773ee32279fec0d8575370 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9d35ed63fc13fe3ef910a9f25dfcce1c = $(`<div id="html_9d35ed63fc13fe3ef910a9f25dfcce1c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 화북동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">28,413명</span>     </div></div>`)[0];
+                popup_7f1e35cdd5773ee32279fec0d8575370.setContent(html_9d35ed63fc13fe3ef910a9f25dfcce1c);
+            
+        
+
+        circle_marker_36380adc640dae1118bdd1f53c74b4e3.bindPopup(popup_7f1e35cdd5773ee32279fec0d8575370)
+        ;
+
+        
+    
+    
+            circle_marker_36380adc640dae1118bdd1f53c74b4e3.bindTooltip(
+                `<div>
+                     제주시 화북동  28,413명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_e7bd6bd81caa81f0421c665a0b6dd993 = L.circleMarker(
+                [33.5262, 126.5923],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.822163243951945, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_4a7fe3a2d573d7b6dd8e80d687a63d49 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_830fa2e07f0d8d03edf57f9b228bd0d3 = $(`<div id="html_830fa2e07f0d8d03edf57f9b228bd0d3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 삼양동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">17,986명</span>     </div></div>`)[0];
+                popup_4a7fe3a2d573d7b6dd8e80d687a63d49.setContent(html_830fa2e07f0d8d03edf57f9b228bd0d3);
+            
+        
+
+        circle_marker_e7bd6bd81caa81f0421c665a0b6dd993.bindPopup(popup_4a7fe3a2d573d7b6dd8e80d687a63d49)
+        ;
+
+        
+    
+    
+            circle_marker_e7bd6bd81caa81f0421c665a0b6dd993.bindTooltip(
+                `<div>
+                     제주시 삼양동  17,986명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_ae82b098816f9bee6af63daf272c4df8 = L.circleMarker(
+                [33.4758, 126.5823],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.515443329349203, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_4686b597035456cc6724794e94aa2051 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_beec5ded4eff6acc4460916e15e4ad62 = $(`<div id="html_beec5ded4eff6acc4460916e15e4ad62" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 봉개동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">8,754명</span>     </div></div>`)[0];
+                popup_4686b597035456cc6724794e94aa2051.setContent(html_beec5ded4eff6acc4460916e15e4ad62);
+            
+        
+
+        circle_marker_ae82b098816f9bee6af63daf272c4df8.bindPopup(popup_4686b597035456cc6724794e94aa2051)
+        ;
+
+        
+    
+    
+            circle_marker_ae82b098816f9bee6af63daf272c4df8.bindTooltip(
+                `<div>
+                     제주시 봉개동  8,754명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_1d440d23c0473f0f715b95e583de42a4 = L.circleMarker(
+                [33.4701, 126.5415],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.48703012040201, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_0ff7660c6af46bf5b418c9970e9018e7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4329a9c734329531385ec39f5c31611d = $(`<div id="html_4329a9c734329531385ec39f5c31611d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 아라동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">35,612명</span>     </div></div>`)[0];
+                popup_0ff7660c6af46bf5b418c9970e9018e7.setContent(html_4329a9c734329531385ec39f5c31611d);
+            
+        
+
+        circle_marker_1d440d23c0473f0f715b95e583de42a4.bindPopup(popup_0ff7660c6af46bf5b418c9970e9018e7)
+        ;
+
+        
+    
+    
+            circle_marker_1d440d23c0473f0f715b95e583de42a4.bindTooltip(
+                `<div>
+                     제주시 아라동  35,612명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_f5ef679a478ed0e7e66c4c7b0e0b1fe8 = L.circleMarker(
+                [33.4832, 126.5108],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.919087601421392, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_a3d79f8069fb04af2331622593e12b9b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_589bff1cf94357e0f57422e7c7a6c864 = $(`<div id="html_589bff1cf94357e0f57422e7c7a6c864" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 오라동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">14,978명</span>     </div></div>`)[0];
+                popup_a3d79f8069fb04af2331622593e12b9b.setContent(html_589bff1cf94357e0f57422e7c7a6c864);
+            
+        
+
+        circle_marker_f5ef679a478ed0e7e66c4c7b0e0b1fe8.bindPopup(popup_a3d79f8069fb04af2331622593e12b9b)
+        ;
+
+        
+    
+    
+            circle_marker_f5ef679a478ed0e7e66c4c7b0e0b1fe8.bindTooltip(
+                `<div>
+                     제주시 오라동  14,978명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_0130251e38a1978399d93286822e22e6 = L.circleMarker(
+                [33.4896, 126.4937],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.481644787046775, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_ec264cccae77d63072398df5c7945916 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0667539362cb1f31b8120d62dc03578b = $(`<div id="html_0667539362cb1f31b8120d62dc03578b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 연동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">29,741명</span>     </div></div>`)[0];
+                popup_ec264cccae77d63072398df5c7945916.setContent(html_0667539362cb1f31b8120d62dc03578b);
+            
+        
+
+        circle_marker_0130251e38a1978399d93286822e22e6.bindPopup(popup_ec264cccae77d63072398df5c7945916)
+        ;
+
+        
+    
+    
+            circle_marker_0130251e38a1978399d93286822e22e6.bindTooltip(
+                `<div>
+                     제주시 연동  29,741명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_e23f4ee81ae37a1e9a12e97ae496eeba = L.circleMarker(
+                [33.4796, 126.4677],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.58307084261554, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_f4db9727973b9e6b5980951248a3cd8f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f84cbf15a73b86c0ada8033ca8981112 = $(`<div id="html_f84cbf15a73b86c0ada8033ca8981112" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 노형동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">51,238명</span>     </div></div>`)[0];
+                popup_f4db9727973b9e6b5980951248a3cd8f.setContent(html_f84cbf15a73b86c0ada8033ca8981112);
+            
+        
+
+        circle_marker_e23f4ee81ae37a1e9a12e97ae496eeba.bindPopup(popup_f4db9727973b9e6b5980951248a3cd8f)
+        ;
+
+        
+    
+    
+            circle_marker_e23f4ee81ae37a1e9a12e97ae496eeba.bindTooltip(
+                `<div>
+                     제주시 노형동  51,238명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_64e15b31832db68c41cfd3a066d927fb = L.circleMarker(
+                [33.4872, 126.4427],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.611173776375077, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_88b61ded5d2ac0622018a4f8a8b1dac7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2788b72409607926f2b812b49abb822f = $(`<div id="html_2788b72409607926f2b812b49abb822f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 외도동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">17,245명</span>     </div></div>`)[0];
+                popup_88b61ded5d2ac0622018a4f8a8b1dac7.setContent(html_2788b72409607926f2b812b49abb822f);
+            
+        
+
+        circle_marker_64e15b31832db68c41cfd3a066d927fb.bindPopup(popup_88b61ded5d2ac0622018a4f8a8b1dac7)
+        ;
+
+        
+    
+    
+            circle_marker_64e15b31832db68c41cfd3a066d927fb.bindTooltip(
+                `<div>
+                     제주시 외도동  17,245명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_475d403c72d23d190743332acca8731c = L.circleMarker(
+                [33.5003, 126.4587],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.335849176260142, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_f6aa0cb39bd694785272be87b15d20c6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d44d468e10f1e6646b071d53571b4eda = $(`<div id="html_d44d468e10f1e6646b071d53571b4eda" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 이호동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">10,623명</span>     </div></div>`)[0];
+                popup_f6aa0cb39bd694785272be87b15d20c6.setContent(html_d44d468e10f1e6646b071d53571b4eda);
+            
+        
+
+        circle_marker_475d403c72d23d190743332acca8731c.bindPopup(popup_f6aa0cb39bd694785272be87b15d20c6)
+        ;
+
+        
+    
+    
+            circle_marker_475d403c72d23d190743332acca8731c.bindTooltip(
+                `<div>
+                     제주시 이호동  10,623명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            var circle_marker_e3591d684060a99aef1d1c0000ae711d = L.circleMarker(
+                [33.5094, 126.4719],
+                {"bubblingMouseEvents": true, "color": "#2a78d6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.624591984499276, "stroke": true, "weight": 2}
+            ).addTo(feature_group_87bffedf3efa7533d69b37cf771fdaed);
+        
+    
+        var popup_b127685ed3d9c5b37f9d2fdaf67b1493 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1f4513538cf4415981c845ed0694b497 = $(`<div id="html_1f4513538cf4415981c845ed0694b497" style="width: 100.0%; height: 100.0%;">     <div style="font-family: 'Malgun Gothic', sans-serif; min-width:140px;">       <b style="color:#2a78d6; font-size:14px;">제주시 도두동</b><br>       <hr style="margin:4px 0;">       <span style="font-size:13px;">2025년 인구</span><br>       <span style="font-size:18px; font-weight:bold; color:#2a78d6;">5,254명</span>     </div></div>`)[0];
+                popup_b127685ed3d9c5b37f9d2fdaf67b1493.setContent(html_1f4513538cf4415981c845ed0694b497);
+            
+        
+
+        circle_marker_e3591d684060a99aef1d1c0000ae711d.bindPopup(popup_b127685ed3d9c5b37f9d2fdaf67b1493)
+        ;
+
+        
+    
+    
+            circle_marker_e3591d684060a99aef1d1c0000ae711d.bindTooltip(
+                `<div>
+                     제주시 도두동  5,254명
+                 </div>`,
+                {
+  "sticky": false,
+}
+            );
+        
+    
+            feature_group_87bffedf3efa7533d69b37cf771fdaed.addTo(map_93ca48ac687a322b7dfaf9cc1cc04e12);
+        
+    
+            var layer_control_7935c6f26a04bd8baa1e4c9537e6115f_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_f5106e3827855d6e646c328d71de812e,
+                },
+                overlays :  {
+                    "\uc11c\uadc0\ud3ec\uc2dc \uc74d\uba74\ub3d9" : feature_group_90a95084c10da88820ab541ee44198bf,
+                    "\uc81c\uc8fc\uc2dc \uc74d\uba74\ub3d9" : feature_group_87bffedf3efa7533d69b37cf771fdaed,
+                },
+            };
+            let layer_control_7935c6f26a04bd8baa1e4c9537e6115f = L.control.layers(
+                layer_control_7935c6f26a04bd8baa1e4c9537e6115f_layers.base_layers,
+                layer_control_7935c6f26a04bd8baa1e4c9537e6115f_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_93ca48ac687a322b7dfaf9cc1cc04e12);
+
+        
+</script>
+</html>
